@@ -27,13 +27,13 @@ describe('balanceReducer', () => {
 
     // check if the reducer withdraw from the balance
     it('withdraw from the balance', () => {
-        const withdraw = 10;
+        const withdrawal = 10;
         const initialState = 20;
 
         // check if the reducer returns the correct value
         expect(balanceReducer(initialState, {
-            type: constants.DEPOSIT,
-            withdraw
-        })).toEqual(initialState - withdraw);
+            type: constants.WITHDRAW,
+            withdrawal
+        })).toEqual(initialState - withdrawal);
     });
 });

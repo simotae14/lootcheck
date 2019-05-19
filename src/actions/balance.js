@@ -17,9 +17,9 @@ export const deposit = deposit => {
 };
 
 // action creator withdraw
-export const withdraw = withdraw => {
+export const withdraw = withdrawal => {
     return {
         type: constants.WITHDRAW,
-        withdraw
+        withdrawal
     };
 };
