@@ -24,3 +24,15 @@ it('creates an action to deposit into the balance', () => {
     // check if the action creator return the expectedAction
     expect(actions.deposit(deposit)).toEqual(expectedAction);
 });
+
+// check if an action creator create an action to withdraw money
+it('creates an action to withdraw into the balance', () => {
+    const withdraw = 5;
+    const expectedAction = {
+        type: constants.WITHDRAW,
+        withdraw
+    };
+
+    // check if the action creator return the expectedAction
+    expect(actions.withdraw(withdraw)).toEqual(expectedAction);
+});
