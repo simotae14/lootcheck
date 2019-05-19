@@ -8,6 +8,8 @@ export class Wallet extends Component {
                 <h3 className='balance'>
                     Wallet Balance: {this.props.balance}
                 </h3>
+                <br />
+                <input className="input-wallet"/>
             </div>
         );
     }
