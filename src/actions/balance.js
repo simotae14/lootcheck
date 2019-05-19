@@ -7,3 +7,11 @@ export const setBalance = balance => {
         balance
     };
 };
+
+// action creator deposit
+export const deposit = deposit => {
+    return {
+        type: constants.DEPOSIT,
+        deposit
+    };
+};
