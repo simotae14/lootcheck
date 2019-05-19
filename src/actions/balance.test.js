@@ -10,5 +10,5 @@ it('creates an action to set the balance', () => {
     };
 
     // check if the action creator return the expectedAction
-    expect(action.setBalance(balance)).toEqual(expectedAction);
+    expect(actions.setBalance(balance)).toEqual(expectedAction);
 });
