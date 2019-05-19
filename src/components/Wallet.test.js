@@ -8,7 +8,7 @@ configure({adapter: new Adapter()});
 
 describe('Wallet', () => {
     // create the shallow version of Wallet
-    const wallet = shallow('<Wallet />');
+    const wallet = shallow(<Wallet />);
 
     it('renders properly', () => {
         expect(wallet).toMatchSnapshot();
