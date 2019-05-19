@@ -15,3 +15,11 @@ export const deposit = deposit => {
         deposit
     };
 };
+
+// action creator withdraw
+export const withdraw = withdraw => {
+    return {
+        type: constants.WITHDRAW,
+        withdraw
+    };
+};
