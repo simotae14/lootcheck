@@ -15,7 +15,7 @@ describe('App', () => {
     });
 
     // Chcek if App contains a Wallet component
-    it('contains a Wallet component', () => {
-        expect(app.find('Wallet').exists()).toBe(true);
+    it('contains a connected Wallet component', () => {
+        expect(app.find('ConnectFunction').exists()).toBe(true);
     });
 });

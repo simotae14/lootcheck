@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import balance from '../reducers/balance';
 
 export class Wallet extends Component {
     render() {
