@@ -9,10 +9,13 @@ configure({adapter: new Adapter()});
 describe('Wallet', () => {
     // deposit method mock
     const mockDeposit = jest.fn();
+    // withdraw method mock
+    const mockWithdraw = jest.fn();
     // props
     const props = {
         balance: 20,
-        deposit: mockDeposit
+        deposit: mockDeposit,
+        withdraw: mockWithdraw
     };
     // create the shallow version of Wallet
     const wallet = shallow(<Wallet {...props} />);
@@ -49,6 +52,17 @@ describe('Wallet', () => {
 
             it('dispatches the `deposit()` it receives from props with local balance', () => {
                 expect(mockDeposit).toHaveBeenCalledWith(parseInt(userBalance, 10));
+            });
+        });
+
+        describe('and the user wants to make a withdraw', () => {
+            beforeEach(() => {
+                wallet.find('.btn-withdraw')
+                    .simulate('click');
+            });
+
+            it('dispatches the `withdraw()` it receives from props with local balance', () => {
+                expect(mockWithdraw).toHaveBeenCalledWith(parseInt(userBalance, 10));
             });
         });
     });
