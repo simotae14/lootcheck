@@ -14,8 +14,13 @@ describe('App', () => {
         expect(toJson(app)).toMatchSnapshot();
     });
 
-    // Chcek if App contains a Wallet component
+    // Check if App contains a Wallet component
     it('contains a connected Wallet component', () => {
+        expect(app.find('ConnectFunction').exists()).toBe(true);
+    });
+
+    // Check if App contains a Loot component
+    it('contains a connected Loot component', () => {
         expect(app.find('ConnectFunction').exists()).toBe(true);
     });
 });
