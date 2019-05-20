@@ -7,13 +7,8 @@ import { Loot } from './Loot';
 configure({adapter: new Adapter()});
 
 describe('Loot', () => {
-    // mock fetch
-    const mockFetchBitcoin = jest.fn();
     // props
-    const props = {
-        balance: 10,
-        bitcoin: {}
-    };
+    let props = { balance: 10, bitcoin: {} };
     let loot = shallow(<Loot {...props} />);
 
     it('renders properly', () => {
@@ -21,13 +16,14 @@ describe('Loot', () => {
     });
 
     describe('when mounted', () => {
+        const mockFetchbitcoin = jest.fn();
         beforeEach(() => {
-            props.fetchBitcoin = mockFetchBitcoin;
+            props.fetchBitcoin = mockFetchbitcoin;
             loot = mount(<Loot {...props} />);
         });
 
         it('dispatches the `fetchBitcoin()` method it receives from props', () => {
-            expect(mockFetchBitcoin).toHaveBeenCalled();
+            expect(mockFetchbitcoin).toHaveBeenCalled();
         });
     });
 

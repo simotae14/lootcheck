@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import { fetchBitcoin } from '../actions/bitcoin';
 
 export class Loot extends Component {
+    componentDidMount() {
+        if(this.props.fetchBitcoin) {
+            this.props.fetchBitcoin();
+        }
+    }
     render() {
         return (
             <h3>
@@ -14,7 +19,7 @@ export class Loot extends Component {
 
 const mapStateToProps = state => {
     return {
-        bitcoin: state.bitcoin
+        state
     };
 }
 
