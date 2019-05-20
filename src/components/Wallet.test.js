@@ -21,7 +21,7 @@ describe('Wallet', () => {
     const wallet = shallow(<Wallet {...props} />);
 
     it('renders properly', () => {
-        expect(wallet).toMatchSnapshot();
+        expect(toJson(wallet)).toMatchSnapshot();
     });
 
     it('displays the balance from props', () => {
