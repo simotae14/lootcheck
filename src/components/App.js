@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Wallet from './Wallet';
+import Loot from './Loot';
 
 class App extends Component {
     render() {
@@ -10,6 +11,8 @@ class App extends Component {
                 </h2>
                 <hr />
                 <Wallet />
+                <hr />
+                <Loot />
             </div>
         );
     }
