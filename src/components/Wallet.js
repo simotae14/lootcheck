@@ -46,7 +46,7 @@ export class Wallet extends Component {
 
 const mapStateToProps = state => {
     return {
-        balance: state
+        balance: state.balance
     };
 }
 
